@@ -1,0 +1,14 @@
+If status = "pembelian" Then
+    DoCmd.SetWarnings False
+    DoCmd.RunSQL "insert into dpembelian values(" & Forms!pembelian!idpemb & ", " & _
+                  "" & idobat & ", " & hrgbeli & ", 1 , 0 )"
+    Forms!pembelian.Refresh
+    Forms!pembelian.scrollFocus
+End If
+
+
+Sub scrollFocus()
+DoCmd.Close acForm, "Obat", acSaveNo
+Me!dpembelian.SetFocus
+DoCmd.GoToRecord , , acNewRec
+End Sub

@@ -1,0 +1,13 @@
+form: 
+- report, diubah pengambilan data dengan rowsource dan row source type 
+
+query: 
+- qlappembelian, dimasukan idsupplier
+- qlappenjualan, dimasukan idcustomer
+
+report:
+- lappembelian, dimasukkan idsupp 
+- lappenjualan, dimasukkan idcustomer 
+- stok, sort by id_obat
+- supplier, sort by idsupp
+- customer, sort by idcustomer
